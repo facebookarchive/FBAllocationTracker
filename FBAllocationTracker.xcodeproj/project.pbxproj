@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75BF0EC91C5BCEA000E0DAB6 /* FBAllocationTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0EC81C5BCEA000E0DAB6 /* FBAllocationTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75BF0EDE1C5BCF3200E0DAB6 /* FBAllocationTrackerFunctors.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0ED01C5BCF3200E0DAB6 /* FBAllocationTrackerFunctors.h */; };
+		75BF0EDF1C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0ED11C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.h */; };
+		75BF0EE01C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0ED21C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.mm */; };
+		75BF0EE11C5BCF3200E0DAB6 /* FBAllocationTrackerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0ED31C5BCF3200E0DAB6 /* FBAllocationTrackerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75BF0EE21C5BCF3200E0DAB6 /* FBAllocationTrackerManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0ED41C5BCF3200E0DAB6 /* FBAllocationTrackerManager.mm */; };
+		75BF0EE31C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0ED51C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75BF0EE41C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0ED61C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.m */; };
+		75BF0EE51C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0ED81C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.h */; };
+		75BF0EE61C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0ED91C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.mm */; };
+		75BF0EE71C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0EDA1C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.h */; };
+		75BF0EE81C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0EDB1C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.mm */; };
+		75BF0EE91C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0EDC1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.h */; };
+		75BF0EEA1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0EDD1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		75BF0EF41C5BCF8100E0DAB6 /* FBAllocationTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BF0EC51C5BCEA000E0DAB6 /* FBAllocationTracker.framework */; };
+		75BF0EFB1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0EFA1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75BF0EF51C5BCF8100E0DAB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75BF0EBC1C5BCEA000E0DAB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75BF0EC41C5BCEA000E0DAB6;
+			remoteInfo = FBAllocationTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		75BF0EC51C5BCEA000E0DAB6 /* FBAllocationTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBAllocationTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75BF0EC81C5BCEA000E0DAB6 /* FBAllocationTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBAllocationTracker.h; sourceTree = "<group>"; };
+		75BF0ECA1C5BCEA000E0DAB6 /* FBAllocationTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBAllocationTracker-Info.plist"; sourceTree = "<group>"; };
+		75BF0ED01C5BCF3200E0DAB6 /* FBAllocationTrackerFunctors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAllocationTrackerFunctors.h; sourceTree = "<group>"; };
+		75BF0ED11C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAllocationTrackerImpl.h; sourceTree = "<group>"; };
+		75BF0ED21C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBAllocationTrackerImpl.mm; sourceTree = "<group>"; };
+		75BF0ED31C5BCF3200E0DAB6 /* FBAllocationTrackerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAllocationTrackerManager.h; sourceTree = "<group>"; };
+		75BF0ED41C5BCF3200E0DAB6 /* FBAllocationTrackerManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBAllocationTrackerManager.mm; sourceTree = "<group>"; };
+		75BF0ED51C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAllocationTrackerSummary.h; sourceTree = "<group>"; };
+		75BF0ED61C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAllocationTrackerSummary.m; sourceTree = "<group>"; };
+		75BF0ED81C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAllocationTrackerGeneration.h; sourceTree = "<group>"; };
+		75BF0ED91C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBAllocationTrackerGeneration.mm; sourceTree = "<group>"; };
+		75BF0EDA1C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAllocationTrackerGenerationManager.h; sourceTree = "<group>"; };
+		75BF0EDB1C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBAllocationTrackerGenerationManager.mm; sourceTree = "<group>"; };
+		75BF0EDC1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBAllocationTracker.h"; sourceTree = "<group>"; };
+		75BF0EDD1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSObject+FBAllocationTracker.mm"; sourceTree = "<group>"; };
+		75BF0EEF1C5BCF8100E0DAB6 /* FBAllocationTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBAllocationTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75BF0EF31C5BCF8100E0DAB6 /* FBAllocationTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBAllocationTrackerTests-Info.plist"; sourceTree = "<group>"; };
+		75BF0EFA1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBAllocationTrackerGenerationsTests.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75BF0EC11C5BCEA000E0DAB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75BF0EEC1C5BCF8100E0DAB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75BF0EF41C5BCF8100E0DAB6 /* FBAllocationTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75BF0EBB1C5BCEA000E0DAB6 = {
+			isa = PBXGroup;
+			children = (
+				75BF0EC71C5BCEA000E0DAB6 /* FBAllocationTracker */,
+				75BF0EF01C5BCF8100E0DAB6 /* FBAllocationTrackerTests */,
+				75BF0EC61C5BCEA000E0DAB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75BF0EC61C5BCEA000E0DAB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0EC51C5BCEA000E0DAB6 /* FBAllocationTracker.framework */,
+				75BF0EEF1C5BCF8100E0DAB6 /* FBAllocationTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75BF0EC71C5BCEA000E0DAB6 /* FBAllocationTracker */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0ECA1C5BCEA000E0DAB6 /* FBAllocationTracker-Info.plist */,
+				75BF0EC81C5BCEA000E0DAB6 /* FBAllocationTracker.h */,
+				75BF0ED01C5BCF3200E0DAB6 /* FBAllocationTrackerFunctors.h */,
+				75BF0ED11C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.h */,
+				75BF0ED21C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.mm */,
+				75BF0ED31C5BCF3200E0DAB6 /* FBAllocationTrackerManager.h */,
+				75BF0ED41C5BCF3200E0DAB6 /* FBAllocationTrackerManager.mm */,
+				75BF0ED51C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.h */,
+				75BF0ED61C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.m */,
+				75BF0ED71C5BCF3200E0DAB6 /* Generations */,
+				75BF0EDC1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.h */,
+				75BF0EDD1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.mm */,
+			);
+			path = FBAllocationTracker;
+			sourceTree = "<group>";
+		};
+		75BF0ED71C5BCF3200E0DAB6 /* Generations */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0ED81C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.h */,
+				75BF0ED91C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.mm */,
+				75BF0EDA1C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.h */,
+				75BF0EDB1C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.mm */,
+			);
+			path = Generations;
+			sourceTree = "<group>";
+		};
+		75BF0EF01C5BCF8100E0DAB6 /* FBAllocationTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0EF31C5BCF8100E0DAB6 /* FBAllocationTrackerTests-Info.plist */,
+				75BF0EFA1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm */,
+			);
+			path = FBAllocationTrackerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		75BF0EC21C5BCEA000E0DAB6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75BF0EC91C5BCEA000E0DAB6 /* FBAllocationTracker.h in Headers */,
+				75BF0EE11C5BCF3200E0DAB6 /* FBAllocationTrackerManager.h in Headers */,
+				75BF0EE31C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.h in Headers */,
+				75BF0EE91C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.h in Headers */,
+				75BF0EDF1C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.h in Headers */,
+				75BF0EDE1C5BCF3200E0DAB6 /* FBAllocationTrackerFunctors.h in Headers */,
+				75BF0EE71C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.h in Headers */,
+				75BF0EE51C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		75BF0EC41C5BCEA000E0DAB6 /* FBAllocationTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75BF0ECD1C5BCEA000E0DAB6 /* Build configuration list for PBXNativeTarget "FBAllocationTracker" */;
+			buildPhases = (
+				75BF0EC01C5BCEA000E0DAB6 /* Sources */,
+				75BF0EC11C5BCEA000E0DAB6 /* Frameworks */,
+				75BF0EC21C5BCEA000E0DAB6 /* Headers */,
+				75BF0EC31C5BCEA000E0DAB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBAllocationTracker;
+			productName = FBAllocationTracker;
+			productReference = 75BF0EC51C5BCEA000E0DAB6 /* FBAllocationTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		75BF0EEE1C5BCF8100E0DAB6 /* FBAllocationTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75BF0EF71C5BCF8100E0DAB6 /* Build configuration list for PBXNativeTarget "FBAllocationTrackerTests" */;
+			buildPhases = (
+				75BF0EEB1C5BCF8100E0DAB6 /* Sources */,
+				75BF0EEC1C5BCF8100E0DAB6 /* Frameworks */,
+				75BF0EED1C5BCF8100E0DAB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75BF0EF61C5BCF8100E0DAB6 /* PBXTargetDependency */,
+			);
+			name = FBAllocationTrackerTests;
+			productName = FBAllocationTrackerTests;
+			productReference = 75BF0EEF1C5BCF8100E0DAB6 /* FBAllocationTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75BF0EBC1C5BCEA000E0DAB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					75BF0EC41C5BCEA000E0DAB6 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					75BF0EEE1C5BCF8100E0DAB6 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 75BF0EBF1C5BCEA000E0DAB6 /* Build configuration list for PBXProject "FBAllocationTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 75BF0EBB1C5BCEA000E0DAB6;
+			productRefGroup = 75BF0EC61C5BCEA000E0DAB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75BF0EC41C5BCEA000E0DAB6 /* FBAllocationTracker */,
+				75BF0EEE1C5BCF8100E0DAB6 /* FBAllocationTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75BF0EC31C5BCEA000E0DAB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75BF0EED1C5BCF8100E0DAB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75BF0EC01C5BCEA000E0DAB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75BF0EE61C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.mm in Sources */,
+				75BF0EE21C5BCF3200E0DAB6 /* FBAllocationTrackerManager.mm in Sources */,
+				75BF0EEA1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.mm in Sources */,
+				75BF0EE81C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.mm in Sources */,
+				75BF0EE01C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.mm in Sources */,
+				75BF0EE41C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75BF0EEB1C5BCF8100E0DAB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75BF0EFB1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75BF0EF61C5BCF8100E0DAB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75BF0EC41C5BCEA000E0DAB6 /* FBAllocationTracker */;
+			targetProxy = 75BF0EF51C5BCF8100E0DAB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		75BF0ECB1C5BCEA000E0DAB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		75BF0ECC1C5BCEA000E0DAB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		75BF0ECE1C5BCEA000E0DAB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/FBAllocationTracker/FBAllocationTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.FBAllocationTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		75BF0ECF1C5BCEA000E0DAB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/FBAllocationTracker/FBAllocationTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.FBAllocationTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		75BF0EF81C5BCF8100E0DAB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FBAllocationTrackerTests/FBAllocationTrackerTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.FBAllocationTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		75BF0EF91C5BCF8100E0DAB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FBAllocationTrackerTests/FBAllocationTrackerTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.FBAllocationTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75BF0EBF1C5BCEA000E0DAB6 /* Build configuration list for PBXProject "FBAllocationTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75BF0ECB1C5BCEA000E0DAB6 /* Debug */,
+				75BF0ECC1C5BCEA000E0DAB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75BF0ECD1C5BCEA000E0DAB6 /* Build configuration list for PBXNativeTarget "FBAllocationTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75BF0ECE1C5BCEA000E0DAB6 /* Debug */,
+				75BF0ECF1C5BCEA000E0DAB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75BF0EF71C5BCF8100E0DAB6 /* Build configuration list for PBXNativeTarget "FBAllocationTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75BF0EF81C5BCF8100E0DAB6 /* Debug */,
+				75BF0EF91C5BCF8100E0DAB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75BF0EBC1C5BCEA000E0DAB6 /* Project object */;
+}
