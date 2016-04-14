@@ -22,6 +22,11 @@ Pod::Spec.new do |s|
   files = files.reject {|file| mrr_files.include?(file)}
 
   s.requires_arc = files
+  s.public_header_files = [
+    'FBAllocationTracker/FBAllocationTracker.h',
+    'FBAllocationTracker/FBAllocationTrackerManager.h',
+    'FBAllocationTracker/FBAllocationTrackerSummary.h',
+  ]
 
   s.framework = "Foundation"
   s.library = 'c++'
