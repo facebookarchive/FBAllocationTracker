@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = {
     :git => "https://github.com/facebook/FBAllocationTracker.git",
-    :tag => "0.1"
+    :tag => "0.1.1"
   }
   s.source_files  = "FBAllocationTracker", "FBAllocationTracker/**/*.{h,m,mm}"
 
@@ -22,6 +22,11 @@ Pod::Spec.new do |s|
   files = files.reject {|file| mrr_files.include?(file)}
 
   s.requires_arc = files
+  s.public_header_files = [
+    'FBAllocationTracker/FBAllocationTracker.h',
+    'FBAllocationTracker/FBAllocationTrackerManager.h',
+    'FBAllocationTracker/FBAllocationTrackerSummary.h',
+  ]
 
   s.framework = "Foundation"
   s.library = 'c++'
