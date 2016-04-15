@@ -1,5 +1,5 @@
 # FBAllocationTracker
-[![Build Status](https://travis-ci.com/facebook/FBAllocationTracker.svg?token=V7h8T5yowczhx1y5QxeQ&branch=master)](https://travis-ci.com/facebook/FBAllocationTracker)
+[![Build Status](https://travis-ci.org/facebook/FBAllocationTracker.svg?branch=master)](https://travis-ci.org/facebook/FBAllocationTracker)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 An iOS library for introspecting Objective-C objects that are currently alive.
