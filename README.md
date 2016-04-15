@@ -1,6 +1,7 @@
 # FBAllocationTracker
 [![Build Status](https://travis-ci.org/facebook/FBAllocationTracker.svg?branch=master)](https://travis-ci.org/facebook/FBAllocationTracker)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods](https://img.shields.io/cocoapods/v/FBAllocationTracker.svg?maxAge=2592000)]()
 
 An iOS library for introspecting Objective-C objects that are currently alive.
 
