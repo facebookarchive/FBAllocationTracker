@@ -9,6 +9,8 @@
 
 #import "FBAllocationTrackerGeneration.h"
 
+#include "FBAllocationTrackerNSZombieSupport.h"
+
 namespace FB { namespace AllocationTracker {
   void Generation::add(__unsafe_unretained id object) {
     Class aCls = [object class];
@@ -46,11 +48,16 @@ namespace FB { namespace AllocationTracker {
          Retain object and add it to returnValue.
          This operation can be unsafe since we are retaining object that could
          be deallocated on other thread.
+
+         When NSZombie enabled, we can find if object has been deallocated by checking its class name.
          */
-        returnValue.push_back(object);
+        if (!fb_isZombieObject(object)) {
+          returnValue.push_back(object);
+        }
       }
     }
 
     return returnValue;
   }
+
 } }
