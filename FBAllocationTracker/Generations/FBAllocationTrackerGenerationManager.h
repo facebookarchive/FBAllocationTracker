@@ -52,7 +52,7 @@ namespace FB { namespace AllocationTracker {
      @param generationIndex index of generation from which the instances should be obtained
      @return vector of instances of class aCls
      */
-    std::vector<id> instancesOfClassInGeneration(__unsafe_unretained Class aCls,
+    std::vector<__weak id> instancesOfClassInGeneration(__unsafe_unretained Class aCls,
                                                  size_t generationIndex);
 
     /**
@@ -60,7 +60,7 @@ namespace FB { namespace AllocationTracker {
      @param aCls Class to query
      @return vector of instances of class aCls
      */
-    std::vector<id> instancesOfClassInLastGeneration(__unsafe_unretained Class aCls);
+    std::vector<__weak id> instancesOfClassInLastGeneration(__unsafe_unretained Class aCls);
 
     /**
      Summarize all generations. For every generation it will summarize how many instances of each
@@ -69,8 +69,8 @@ namespace FB { namespace AllocationTracker {
     FullGenerationSummary summary() const;
 
   private:
-    std::vector<id> unsafeInstancesOfClassInGeneration(__unsafe_unretained Class aCls,
-                                                       size_t generationIndex);
+    std::vector<__weak id> unsafeInstancesOfClassInGeneration(__unsafe_unretained Class aCls,
+                                                              size_t generationIndex);
     std::unordered_map<__unsafe_unretained id, NSInteger, ObjectHashFunctor, ObjectEqualFunctor> generationMapping;
     std::vector<Generation> generations;
   };

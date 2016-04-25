@@ -9,6 +9,9 @@
 
 #import "FBAllocationTrackerGeneration.h"
 
+#import <objc/message.h>
+#import <objc/runtime.h>
+
 namespace FB { namespace AllocationTracker {
   void Generation::add(__unsafe_unretained id object) {
     Class aCls = [object class];
@@ -35,19 +38,33 @@ namespace FB { namespace AllocationTracker {
     return summary;
   }
 
-  std::vector<id> Generation::instancesForClass(__unsafe_unretained Class aCls) const {
-    std::vector<id> returnValue;
+  std::vector<__weak id> Generation::instancesForClass(__unsafe_unretained Class aCls) const {
+    std::vector<__weak id> returnValue;
 
     const GenerationMap::const_iterator obj = objects.find(aCls);
     if (obj != objects.end()) {
       const GenerationList &list = obj->second;
       for (const auto &object: list) {
+        __weak id weakObject = nil;
+        
+        BOOL (*allowsWeakReference)(id, SEL) =
+        (__typeof__(allowsWeakReference))class_getMethodImplementation(aCls, @selector(allowsWeakReference));
+        
+        if (allowsWeakReference && (IMP)allowsWeakReference != _objc_msgForward) {
+          if (allowsWeakReference(object, @selector(allowsWeakReference))) {
+            // This is still racey since allowsWeakReference could change it value by now.
+            weakObject = object;
+          }
+        } else {
+          weakObject = object;
+        }
+        
         /**
          Retain object and add it to returnValue.
          This operation can be unsafe since we are retaining object that could
          be deallocated on other thread.
          */
-        returnValue.push_back(object);
+        returnValue.push_back(weakObject);
       }
     }
 
