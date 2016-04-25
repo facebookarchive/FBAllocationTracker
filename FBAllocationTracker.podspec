@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
   mrr_files = [
     'FBAllocationTracker/NSObject+FBAllocationTracker.h',
     'FBAllocationTracker/NSObject+FBAllocationTracker.mm',
+    'FBAllocationTracker/Generations/FBAllocationTrackerNSZombieSupport.h',
+    'FBAllocationTracker/Generations/FBAllocationTrackerNSZombieSupport.mm'
   ]
 
   files = Pathname.glob("FBAllocationTracker/**/*.{h,m,mm}")

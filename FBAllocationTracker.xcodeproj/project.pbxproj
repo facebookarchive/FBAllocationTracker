@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0943EBDB1CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0943EBD91CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0943EBDC1CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 0943EBDA1CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.h */; };
 		75BF0EC91C5BCEA000E0DAB6 /* FBAllocationTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0EC81C5BCEA000E0DAB6 /* FBAllocationTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75BF0EDE1C5BCF3200E0DAB6 /* FBAllocationTrackerFunctors.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0ED01C5BCF3200E0DAB6 /* FBAllocationTrackerFunctors.h */; };
 		75BF0EDF1C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF0ED11C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.h */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0943EBD91CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBAllocationTrackerNSZombieSupport.mm; sourceTree = "<group>"; };
+		0943EBDA1CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAllocationTrackerNSZombieSupport.h; sourceTree = "<group>"; };
 		75BF0EC51C5BCEA000E0DAB6 /* FBAllocationTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBAllocationTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BF0EC81C5BCEA000E0DAB6 /* FBAllocationTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBAllocationTracker.h; sourceTree = "<group>"; };
 		75BF0ECA1C5BCEA000E0DAB6 /* FBAllocationTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBAllocationTracker-Info.plist"; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				75BF0ED91C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.mm */,
 				75BF0EDA1C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.h */,
 				75BF0EDB1C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.mm */,
+				0943EBDA1CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.h */,
+				0943EBD91CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.mm */,
 			);
 			path = Generations;
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75BF0EC91C5BCEA000E0DAB6 /* FBAllocationTracker.h in Headers */,
+				0943EBDC1CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.h in Headers */,
 				75BF0EE11C5BCF3200E0DAB6 /* FBAllocationTrackerManager.h in Headers */,
 				75BF0EE31C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.h in Headers */,
 				75BF0EE91C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.h in Headers */,
@@ -252,6 +259,7 @@
 				75BF0EEA1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.mm in Sources */,
 				75BF0EE81C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.mm in Sources */,
 				75BF0EE01C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.mm in Sources */,
+				0943EBDB1CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.mm in Sources */,
 				75BF0EE41C5BCF3200E0DAB6 /* FBAllocationTrackerSummary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
