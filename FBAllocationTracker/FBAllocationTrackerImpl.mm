@@ -148,8 +148,11 @@ namespace FB { namespace AllocationTracker {
   }
 
   static bool _isClassBlacklisted(Class aCls) {
-    // We want to omit some classes for performance reasons
+    if (aCls == Nil) {
+      return true;
+    }
 
+    // We want to omit some classes for performance reasons
     static Class blacklistedTaggedPointerContainerClass;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
