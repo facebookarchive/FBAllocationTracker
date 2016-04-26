@@ -147,9 +147,12 @@ namespace FB { namespace AllocationTracker {
     return isTracking;
   }
 
-  static bool _isClassBlacklisted(Class aCls) {
-    // We want to omit some classes for performance reasons
+  static bool _shouldTrackClass(Class aCls) {
+    if (aCls == Nil) {
+      return false;
+    }
 
+    // We want to omit some classes for performance reasons
     static Class blacklistedTaggedPointerContainerClass;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -157,16 +160,16 @@ namespace FB { namespace AllocationTracker {
     });
 
     if (aCls == blacklistedTaggedPointerContainerClass) {
-      return true;
+      return false;
     }
 
-    return false;
+    return true;
   }
 
   void incrementAllocations(__unsafe_unretained id obj) {
     Class aCls = [obj class];
 
-    if (_isClassBlacklisted(aCls)) {
+    if (!_shouldTrackClass(aCls)) {
       return;
     }
 
@@ -184,7 +187,7 @@ namespace FB { namespace AllocationTracker {
   void incrementDeallocations(__unsafe_unretained id obj) {
     Class aCls = [obj class];
 
-    if (_isClassBlacklisted(aCls)) {
+    if (!_shouldTrackClass(aCls)) {
       return;
     }
 
