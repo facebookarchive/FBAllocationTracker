@@ -11,6 +11,7 @@
 
 #import "FBAllocationTrackerGeneration.h"
 #import "FBAllocationTrackerGenerationManager.h"
+#include "FBAllocationTrackerNSZombieSupport.h"
 
 @interface _FBATTestClass : NSObject
 @end
@@ -161,6 +162,18 @@
   for (id object in objects) {
     XCTAssertTrue([instances containsObject:object]);
   }
+}
+
+- (void)testThatNSZobmieClassDetectionWorks {
+  if (!fb_isNSZombieEnabled()) { return; }
+  
+  __unsafe_unretained id deallocatedObject = nil;
+  @autoreleasepool {
+    id testObject = [NSObject new];
+    deallocatedObject = testObject;
+  }
+  
+  XCTAssertTrue(fb_isZombieObject(deallocatedObject));
 }
 
 @end

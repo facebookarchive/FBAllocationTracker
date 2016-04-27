@@ -12,6 +12,8 @@
 #import <objc/message.h>
 #import <objc/runtime.h>
 
+#include "FBAllocationTrackerNSZombieSupport.h"
+
 namespace FB { namespace AllocationTracker {
   void Generation::add(__unsafe_unretained id object) {
     Class aCls = [object class];
@@ -46,10 +48,10 @@ namespace FB { namespace AllocationTracker {
       const GenerationList &list = obj->second;
       for (const auto &object: list) {
         __weak id weakObject = nil;
-        
+
         BOOL (*allowsWeakReference)(id, SEL) =
         (__typeof__(allowsWeakReference))class_getMethodImplementation(aCls, @selector(allowsWeakReference));
-        
+
         if (allowsWeakReference && (IMP)allowsWeakReference != _objc_msgForward) {
           if (allowsWeakReference(object, @selector(allowsWeakReference))) {
             // This is still racey since allowsWeakReference could change it value by now.
@@ -58,16 +60,21 @@ namespace FB { namespace AllocationTracker {
         } else {
           weakObject = object;
         }
-        
+
         /**
          Retain object and add it to returnValue.
          This operation can be unsafe since we are retaining object that could
          be deallocated on other thread.
+
+         When NSZombie enabled, we can find if object has been deallocated by checking its class name.
          */
-        returnValue.push_back(weakObject);
+        if (!fb_isZombieObject(object)) {
+          returnValue.push_back(object);
+        }
       }
     }
 
     return returnValue;
   }
+
 } }
