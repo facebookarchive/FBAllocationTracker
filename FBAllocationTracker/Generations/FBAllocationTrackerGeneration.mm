@@ -9,7 +9,7 @@
 
 #import "FBAllocationTrackerGeneration.h"
 
-#include "FBAllocationTrackerNSZombieSupport.h"
+#import "FBAllocationTrackerNSZombieSupport.h"
 
 namespace FB { namespace AllocationTracker {
   void Generation::add(__unsafe_unretained id object) {
