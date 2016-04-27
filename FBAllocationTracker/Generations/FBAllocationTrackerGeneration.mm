@@ -12,7 +12,7 @@
 #import <objc/message.h>
 #import <objc/runtime.h>
 
-#include "FBAllocationTrackerNSZombieSupport.h"
+#import "FBAllocationTrackerNSZombieSupport.h"
 
 namespace FB { namespace AllocationTracker {
   void Generation::add(__unsafe_unretained id object) {
