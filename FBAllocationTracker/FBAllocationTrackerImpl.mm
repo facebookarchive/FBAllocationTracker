@@ -290,17 +290,17 @@ namespace FB { namespace AllocationTracker {
     return false;
   }
 
-  std::vector<id> instancesOfClassForGeneration(__unsafe_unretained Class aCls,
+  std::vector<__weak id> instancesOfClassForGeneration(__unsafe_unretained Class aCls,
                                                 NSInteger generationIndex) {
     if (_shouldOmitClass(aCls)) {
-      return std::vector<id> {};
+      return std::vector<__weak id> {};
     }
 
     std::lock_guard<std::mutex> l(*_lock);
     if (_generationManager) {
       return _generationManager->instancesOfClassInGeneration(aCls, generationIndex);
     }
-    return std::vector<id> {};
+    return std::vector<__weak id> {};
   }
 
   NSArray *instancesOfClasses(NSArray *classes) {
@@ -315,7 +315,7 @@ namespace FB { namespace AllocationTracker {
         continue;
       }
 
-      std::vector<id> instancesFromGeneration;
+      std::vector<__weak id> instancesFromGeneration;
 
       {
         std::lock_guard<std::mutex> l(*_lock);
@@ -323,7 +323,9 @@ namespace FB { namespace AllocationTracker {
       }
 
       for (const auto &obj: instancesFromGeneration) {
-        [instances addObject:obj];
+        if (obj) {
+          [instances addObject:obj];
+        }
       }
     }
 

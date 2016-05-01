@@ -57,7 +57,7 @@ namespace FB { namespace AllocationTracker {
      @param aCls - class that caller is interested in
      @return vector of instances of class aCls
      */
-    std::vector<id> instancesForClass(__unsafe_unretained Class aCls) const;
+    std::vector<__weak id> instancesForClass(__unsafe_unretained Class aCls) const;
 
     /**
      We do not want Generation to copy, blocking.
