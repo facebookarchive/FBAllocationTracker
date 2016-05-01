@@ -49,13 +49,13 @@ namespace FB { namespace AllocationTracker {
     return fullSummary;
   }
 
-  std::vector<id> GenerationManager::instancesOfClassInGeneration(__unsafe_unretained Class aCls,
+  std::vector<__weak id> GenerationManager::instancesOfClassInGeneration(__unsafe_unretained Class aCls,
                                                                   size_t generationIndex) {
     const Generation &givenGeneration = generations[generationIndex];
     return givenGeneration.instancesForClass(aCls);
   }
 
-  std::vector<id> GenerationManager::instancesOfClassInLastGeneration(__unsafe_unretained Class aCls) {
+  std::vector<__weak id> GenerationManager::instancesOfClassInLastGeneration(__unsafe_unretained Class aCls) {
     size_t generationIndex = generations.size() - 1;
     return instancesOfClassInGeneration(aCls, generationIndex);
   }

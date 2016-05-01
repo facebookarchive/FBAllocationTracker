@@ -149,13 +149,19 @@ BOOL FBIsFBATEnabledInThisBuild(void)
 - (NSArray *)instancesForClass:(__unsafe_unretained Class)aCls
                   inGeneration:(NSInteger)generation
 {
-  std::vector<id> objects = FB::AllocationTracker::instancesOfClassForGeneration(aCls, generation);
+  std::vector<__weak id> objects = FB::AllocationTracker::instancesOfClassForGeneration(aCls, generation);
   
   if (objects.size() == 0) {
     return nil;
   }
   
-  return [NSArray arrayWithObjects:objects.data() count:objects.size()];
+  NSMutableArray *objectArray = [NSMutableArray new];
+  for (id obj: objects) {
+    if (obj) {
+      [objectArray addObject:obj];
+    }
+  }
+  return objectArray;
 }
 
 - (NSArray *)instancesOfClasses:(NSArray *)classes

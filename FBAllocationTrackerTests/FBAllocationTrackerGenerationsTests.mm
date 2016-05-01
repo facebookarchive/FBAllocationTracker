@@ -153,7 +153,7 @@
     _manager->addObject(object);
   }
 
-  std::vector<id> returnedInstances = _manager->instancesOfClassInGeneration([_FBATTestClass class], 1);
+  std::vector<__weak id> returnedInstances = _manager->instancesOfClassInGeneration([_FBATTestClass class], 1);
   NSMutableArray *instances = [NSMutableArray new];
   for (id obj: returnedInstances) {
     [instances addObject:obj];
