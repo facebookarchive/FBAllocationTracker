@@ -68,8 +68,8 @@ namespace FB { namespace AllocationTracker {
 
          When NSZombie enabled, we can find if object has been deallocated by checking its class name.
          */
-        if (!fb_isZombieObject(object)) {
-          returnValue.push_back(object);
+        if (!fb_isZombieObject(weakObject)) {
+          returnValue.push_back(weakObject);
         }
       }
     }
