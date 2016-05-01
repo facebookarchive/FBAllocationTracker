@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FBAllocationTracker"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "Interface for tracking allocations and generations of objects"
   s.homepage     = "https://github.com/facebook/FBAllocationTracker"
   s.license      = "BSD"
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.source       = {
     :git => "https://github.com/facebook/FBAllocationTracker.git",
-    :tag => "0.1.3"
+    :tag => "0.1.4"
   }
   s.source_files  = "FBAllocationTracker", "FBAllocationTracker/**/*.{h,m,mm}"
 
