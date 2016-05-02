@@ -96,16 +96,6 @@ namespace FB { namespace AllocationTracker {
   FullGenerationSummary generationSummary();
 
   /**
-   Helper function that NSObject swizzles will use to increment on alloc
-   */
-  void incrementAllocations(__unsafe_unretained id obj);
-
-  /**
-   Helper function that NSObject swizzles will use to decrement on dealloc
-   */
-  void incrementDeallocations(__unsafe_unretained id obj);
-
-  /**
    Yields all classes that are being tracked by Allocation Tracker (all classes that's instances
    were created since enabling Allocation Tracker).
    */

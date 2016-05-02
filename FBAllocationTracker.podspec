@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
     :tag => "0.1.4"
   }
   s.source_files  = "FBAllocationTracker", "FBAllocationTracker/**/*.{h,m,mm}"
-  s.pod_target_xcconfig = { 'CLANG_ENABLE_OBJC_WEAK' => 'YES' }
 
   mrr_files = [
     'FBAllocationTracker/NSObject+FBAllocationTracker.h',
