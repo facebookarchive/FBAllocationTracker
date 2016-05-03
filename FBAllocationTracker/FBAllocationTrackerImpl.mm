@@ -14,6 +14,7 @@
 #import <unordered_set>
 #import <vector>
 
+#import "FBAllocationTrackerHelpers.h"
 #import "NSObject+FBAllocationTracker.h"
 
 #if _INTERNAL_FBAT_ENABLED
