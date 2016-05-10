@@ -7,6 +7,8 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+#import "FBAllocationTrackerDefines.h"
+
 #if _INTERNAL_FBAT_ENABLED
 
 namespace FB { namespace AllocationTracker {

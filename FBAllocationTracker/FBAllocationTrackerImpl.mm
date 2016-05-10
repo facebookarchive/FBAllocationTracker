@@ -14,6 +14,7 @@
 #import <unordered_set>
 #import <vector>
 
+#import "FBAllocationTrackerDefines.h"
 #import "FBAllocationTrackerHelpers.h"
 #import "NSObject+FBAllocationTracker.h"
 

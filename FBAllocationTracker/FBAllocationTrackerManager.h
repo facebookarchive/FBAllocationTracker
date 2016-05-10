@@ -9,6 +9,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "FBAllocationTrackerDefines.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif

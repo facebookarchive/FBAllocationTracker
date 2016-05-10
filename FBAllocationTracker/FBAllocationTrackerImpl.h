@@ -11,14 +11,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "FBAllocationTrackerDefines.h"
 #import "FBAllocationTrackerFunctors.h"
 #import "FBAllocationTrackerGenerationManager.h"
-
-#ifdef ALLOCATION_TRACKER_ENABLED
-#define _INTERNAL_FBAT_ENABLED (ALLOCATION_TRACKER_ENABLED)
-#else
-#define _INTERNAL_FBAT_ENABLED DEBUG
-#endif // ALLOCATION_TRACKER_ENABLED
 
 /**
  FBAllocationTracker is a simple tool that's only purpose is to be able to track
