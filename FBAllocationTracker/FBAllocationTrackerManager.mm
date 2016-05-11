@@ -11,6 +11,7 @@
 
 #import <objc/runtime.h>
 
+#import "FBAllocationTrackerDefines.h"
 #import "FBAllocationTrackerImpl.h"
 #import "FBAllocationTrackerSummary.h"
 

@@ -13,6 +13,7 @@
 
 #import "NSObject+FBAllocationTracker.h"
 
+#import "FBAllocationTrackerDefines.h"
 #import "FBAllocationTrackerHelpers.h"
 
 #if _INTERNAL_FBAT_ENABLED

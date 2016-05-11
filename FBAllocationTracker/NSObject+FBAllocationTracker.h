@@ -9,6 +9,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "FBAllocationTrackerDefines.h"
+
 /**
  This category will expose methods to swizzle allocs
  for NSObject. The allocs and deallocs will be registered
