@@ -25,7 +25,7 @@
 		75BF0EEA1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0EDD1C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		75BF0EF41C5BCF8100E0DAB6 /* FBAllocationTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BF0EC51C5BCEA000E0DAB6 /* FBAllocationTracker.framework */; };
 		75BF0EFB1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0EFA1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm */; };
-		75D15A121CE2A88200C18F06 /* FBAllocationTrackerDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D15A111CE2A88200C18F06 /* FBAllocationTrackerDefines.h */; };
+		75D15A121CE2A88200C18F06 /* FBAllocationTrackerDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D15A111CE2A88200C18F06 /* FBAllocationTrackerDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ACA3EA11CD811E8003C2688 /* FBAllocationTrackerHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACA3E9F1CD811E8003C2688 /* FBAllocationTrackerHelpers.h */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +152,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75D15A121CE2A88200C18F06 /* FBAllocationTrackerDefines.h in Headers */,
 				75BF0EC91C5BCEA000E0DAB6 /* FBAllocationTracker.h in Headers */,
 				0943EBDC1CCE95C900238D89 /* FBAllocationTrackerNSZombieSupport.h in Headers */,
 				75BF0EE11C5BCF3200E0DAB6 /* FBAllocationTrackerManager.h in Headers */,
@@ -160,7 +161,6 @@
 				75BF0EE91C5BCF3200E0DAB6 /* NSObject+FBAllocationTracker.h in Headers */,
 				75BF0EDF1C5BCF3200E0DAB6 /* FBAllocationTrackerImpl.h in Headers */,
 				75BF0EDE1C5BCF3200E0DAB6 /* FBAllocationTrackerFunctors.h in Headers */,
-				75D15A121CE2A88200C18F06 /* FBAllocationTrackerDefines.h in Headers */,
 				75BF0EE71C5BCF3200E0DAB6 /* FBAllocationTrackerGenerationManager.h in Headers */,
 				75BF0EE51C5BCF3200E0DAB6 /* FBAllocationTrackerGeneration.h in Headers */,
 			);
