@@ -105,7 +105,7 @@ This can be used to analyze allocations, for example by performing common tasks 
 `FBAllocationTracker` is heavily used in [FBMemoryProfiler](https://github.com/facebook/FBMemoryProfiler). It provides data for `FBMemoryProfiler`. It also is a great source of candidates for [FBRetainCycleDetector](https://github.com/facebook/FBRetainCycleDetector).
 
 ## Contributing
-See the [CONTRIBUTING](CONTRIBUTING) file for how to help out.
+See the [CONTRIBUTING.md](CONTRIBUTING.md) file for how to help out.
 
 ## License
 [`FBAllocationTracker` is BSD-licensed](LICENSE). We also provide an additional [patent grant](PATENTS).
