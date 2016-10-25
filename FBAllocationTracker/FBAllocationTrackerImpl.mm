@@ -250,14 +250,14 @@ namespace FB { namespace AllocationTracker {
 
   void enableGenerations() {
     std::lock_guard<std::mutex> l(*_lock);
-    
+
     if (_generationManager) {
       return;
     }
-    
+
     _generationManager = new GenerationManager();
   }
-  
+
   void disableGenerations(void) {
     std::lock_guard<std::mutex> l(*_lock);
 
@@ -274,7 +274,7 @@ namespace FB { namespace AllocationTracker {
 
   FullGenerationSummary generationSummary() {
     std::lock_guard<std::mutex> l(*_lock);
-    
+
     if (_generationManager) {
       return _generationManager->summary();
     }
@@ -325,8 +325,9 @@ namespace FB { namespace AllocationTracker {
       }
 
       for (const auto &obj: instancesFromGeneration) {
-        if (obj) {
-          [instances addObject:obj];
+        id retainedObject = obj;
+        if (retainedObject) {
+          [instances addObject:retainedObject];
         }
       }
     }
