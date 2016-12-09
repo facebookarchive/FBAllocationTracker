@@ -40,9 +40,6 @@ namespace {
   static bool _trackingInProgress = false;
   static auto *_lock = (new std::mutex);
 
-  // Private interface
-  static bool _didCopyOriginalMethods = false;
-
   static FB::AllocationTracker::GenerationManager *_generationManager = nil;
 
   void replaceSelectorWithSelector(Class aCls,
@@ -50,44 +47,18 @@ namespace {
                                    SEL replacementSelector,
                                    FBMethodType methodType) {
 
+    Method originalSelectorMethod = (methodType == FBClassMethod
+                                      ? class_getClassMethod(aCls, selector)
+                                      : class_getInstanceMethod(aCls, selector));
+      
     Method replacementSelectorMethod = (methodType == FBClassMethod
                                         ? class_getClassMethod(aCls, replacementSelector)
                                         : class_getInstanceMethod(aCls, replacementSelector));
 
-    Class classEntityToEdit = aCls;
-    if (methodType == FBClassMethod) {
-      // Get meta-class
-      classEntityToEdit = object_getClass(aCls);
-    }
-    class_replaceMethod(classEntityToEdit,
-                        selector,
-                        method_getImplementation(replacementSelectorMethod),
-                        method_getTypeEncoding(replacementSelectorMethod));
-  }
-
-  void prepareOriginalMethods(void) {
-    if (_didCopyOriginalMethods) {
-      return;
-    }
-
-    // prepareOriginalMethods called from turnOn/Off which is synced by
-    // _lock, this is thread-safe
-    _didCopyOriginalMethods = true;
-
-    replaceSelectorWithSelector([NSObject class],
-                                @selector(fb_originalAlloc),
-                                @selector(alloc),
-                                FBClassMethod);
-
-    replaceSelectorWithSelector([NSObject class],
-                                @selector(fb_originalDealloc),
-                                sel_registerName("dealloc"),
-                                FBInstanceMethod);
+    method_exchangeImplementations(originalSelectorMethod, replacementSelectorMethod);
   }
 
   void turnOnTracking(void) {
-    prepareOriginalMethods();
-
     replaceSelectorWithSelector([NSObject class],
                                 @selector(alloc),
                                 @selector(fb_newAlloc),
@@ -100,16 +71,14 @@ namespace {
   }
 
   void turnOffTracking(void) {
-    prepareOriginalMethods();
-
     replaceSelectorWithSelector([NSObject class],
+                                @selector(fb_newAlloc),
                                 @selector(alloc),
-                                @selector(fb_originalAlloc),
                                 FBClassMethod);
 
     replaceSelectorWithSelector([NSObject class],
+                                @selector(fb_newDealloc),
                                 sel_registerName("dealloc"),
-                                @selector(fb_originalDealloc),
                                 FBInstanceMethod);
   }
 }
