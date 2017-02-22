@@ -1,5 +1,4 @@
 language: objective-c
-xcode_project: FBAllocationTracker.xcodeproj
-xcode_scheme: FBAllocationTracker
 osx_image: xcode8.2
-xcode_sdk: iphonesimulator10.2
+script:
+  ./build.sh
