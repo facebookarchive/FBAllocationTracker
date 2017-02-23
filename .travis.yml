@@ -1,4 +1,4 @@
 language: objective-c
-osx_image: xcode8.2
+osx_image: xcode8
 script:
   ./build.sh
