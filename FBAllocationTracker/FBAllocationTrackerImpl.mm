@@ -232,7 +232,7 @@ namespace FB { namespace AllocationTracker {
 
     for (Class aCls: keys) {
       // Non-zero instances are the only interesting ones
-      if (allocationsUntilNow[aCls] - deallocationsUntilNow[aCls] <= 0) {
+      if (allocationsUntilNow[aCls] <= deallocationsUntilNow[aCls]) {
         continue;
       }
 
