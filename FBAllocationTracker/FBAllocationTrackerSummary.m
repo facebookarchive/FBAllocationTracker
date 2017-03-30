@@ -28,4 +28,9 @@
   return self;
 }
 
+-(NSString *)description
+{
+  return [NSString stringWithFormat:@"%@: allocations=%@ deallocations=%@ alive=%@ size=%@", _className, @(_allocations), @(_deallocations), @(_aliveObjects), @(_instanceSize)];
+}
+
 @end
