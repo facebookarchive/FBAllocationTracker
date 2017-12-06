@@ -75,8 +75,8 @@ namespace {
     _didCopyOriginalMethods = true;
 
     replaceSelectorWithSelector([NSObject class],
-                                @selector(fb_originalAlloc),
-                                @selector(alloc),
+                                @selector(fb_originalAllocWithZone:),
+                                @selector(allocWithZone:),
                                 FBClassMethod);
 
     replaceSelectorWithSelector([NSObject class],
@@ -89,8 +89,8 @@ namespace {
     prepareOriginalMethods();
 
     replaceSelectorWithSelector([NSObject class],
-                                @selector(alloc),
-                                @selector(fb_newAlloc),
+                                @selector(allocWithZone:),
+                                @selector(fb_newAllocWithZone:),
                                 FBClassMethod);
 
     replaceSelectorWithSelector([NSObject class],
@@ -104,7 +104,7 @@ namespace {
 
     replaceSelectorWithSelector([NSObject class],
                                 @selector(alloc),
-                                @selector(fb_originalAlloc),
+                                @selector(fb_originalAllocWithZone:),
                                 FBClassMethod);
 
     replaceSelectorWithSelector([NSObject class],
