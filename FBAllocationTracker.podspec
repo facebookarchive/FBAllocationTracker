@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "Grzegorz Pstrucha" => "gricha@fb.com" }
   s.platform     = :ios, "7.0"
   s.source       = {
-    :git => "https://github.com/facebook/FBAllocationTracker.git",
+    :git => "https://github.com/grigorye/FBAllocationTracker.git",
     :tag => "0.1.5"
   }
   s.source_files  = "FBAllocationTracker", "FBAllocationTracker/**/*.{h,m,mm}"
