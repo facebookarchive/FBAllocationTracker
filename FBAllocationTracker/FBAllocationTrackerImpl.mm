@@ -103,7 +103,7 @@ namespace {
     prepareOriginalMethods();
 
     replaceSelectorWithSelector([NSObject class],
-                                @selector(alloc),
+								@selector(allocWithZone:),
                                 @selector(fb_originalAllocWithZone:),
                                 FBClassMethod);
 
