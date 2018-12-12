@@ -33,4 +33,8 @@ Pod::Spec.new do |s|
 
   s.framework = "Foundation"
   s.library = 'c++'
+
+  s.test_spec 'Tests' do |test_spec|
+    test_spec.source_files = 'FBAllocationTrackerTests/*.mm'
+  end
 end
