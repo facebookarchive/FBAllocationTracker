@@ -32,9 +32,7 @@
 - (void)tearDown
 {
   [[FBAllocationTrackerManager sharedManager] disableGenerations];
-#if 0 // Crashes otherwise under iPhone 8 Plus Simulator/iOS 11.2
   [[FBAllocationTrackerManager sharedManager] stopTrackingAllocations];
-#endif
   
   [super tearDown];
 }
