@@ -5,7 +5,8 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/facebook/FBAllocationTracker"
   s.license      = "BSD"
   s.author       = { "Grzegorz Pstrucha" => "gricha@fb.com" }
-  s.platform     = :ios, "7.0"
+  s.ios.deployment_target = '7.0'
+  s.osx.deployment_target = '10.11'
   s.source       = {
     :git => "https://github.com/facebook/FBAllocationTracker.git",
     :tag => "0.1.5"
@@ -24,6 +25,8 @@ Pod::Spec.new do |s|
   files = files.reject {|file| mrr_files.include?(file)}
 
   s.requires_arc = files
+  s.osx.compiler_flags = '-fobjc-weak'
+  
   s.public_header_files = [
     'FBAllocationTracker/FBAllocationTracker.h',
     'FBAllocationTracker/FBAllocationTrackerManager.h',
