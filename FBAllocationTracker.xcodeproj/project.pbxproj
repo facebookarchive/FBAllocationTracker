@@ -27,7 +27,6 @@
 		75BF0EFB1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0EFA1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm */; };
 		75D15A121CE2A88200C18F06 /* FBAllocationTrackerDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D15A111CE2A88200C18F06 /* FBAllocationTrackerDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ACA3EA11CD811E8003C2688 /* FBAllocationTrackerHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACA3E9F1CD811E8003C2688 /* FBAllocationTrackerHelpers.h */; };
-		A18DB4331FD7702500254FF8 /* FBAllocationTrackerManagerTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = A18DB4321FD7702500254FF8 /* FBAllocationTrackerManagerTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		75BF0EFA1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBAllocationTrackerGenerationsTests.mm; sourceTree = "<group>"; };
 		75D15A111CE2A88200C18F06 /* FBAllocationTrackerDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAllocationTrackerDefines.h; sourceTree = "<group>"; };
 		7ACA3E9F1CD811E8003C2688 /* FBAllocationTrackerHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAllocationTrackerHelpers.h; sourceTree = "<group>"; };
-		A18DB4321FD7702500254FF8 /* FBAllocationTrackerManagerTests.mm */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.objcpp; path = FBAllocationTrackerManagerTests.mm; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +141,6 @@
 			children = (
 				75BF0EF31C5BCF8100E0DAB6 /* FBAllocationTrackerTests-Info.plist */,
 				75BF0EFA1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm */,
-				A18DB4321FD7702500254FF8 /* FBAllocationTrackerManagerTests.mm */,
 			);
 			path = FBAllocationTrackerTests;
 			sourceTree = "<group>";
@@ -279,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A18DB4331FD7702500254FF8 /* FBAllocationTrackerManagerTests.mm in Sources */,
 				75BF0EFB1C5BCFAF00E0DAB6 /* FBAllocationTrackerGenerationsTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
