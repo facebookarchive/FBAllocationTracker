@@ -20,9 +20,9 @@
 
 @implementation NSObject (FBAllocationTracker)
 
-+ (id)fb_originalAllocWithZone:(id)zone
++ (id)fb_originalAlloc
 {
-  // Placeholder for original allocWithZone:
+  // Placeholder for original alloc
   return nil;
 }
 
@@ -31,9 +31,9 @@
   // Placeholder for original dealloc
 }
 
-+ (id)fb_newAllocWithZone:(id)zone
++ (id)fb_newAlloc
 {
-  id object = [self fb_originalAllocWithZone:zone];
+  id object = [self fb_originalAlloc];
   FB::AllocationTracker::incrementAllocations(object);
   return object;
 }

@@ -22,10 +22,10 @@
 
 @interface NSObject (FBAllocationTracker)
 
-+ (nonnull id)fb_originalAllocWithZone:(nullable id)zone;
++ (nonnull id)fb_originalAlloc;
 - (void)fb_originalDealloc;
 
-+ (nonnull id)fb_newAllocWithZone:(nullable id)zone;
++ (nonnull id)fb_newAlloc;
 - (void)fb_newDealloc;
 
 @end
