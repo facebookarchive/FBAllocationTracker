@@ -34,7 +34,7 @@ BOOL FBIsFBATEnabledInThisBuild(void)
   if (self = [super init]) {
     _queue = dispatch_queue_create("com.facebook.fbat.manager", DISPATCH_QUEUE_SERIAL);
   }
-  
+
   return self;
 }
 
@@ -66,7 +66,7 @@ BOOL FBIsFBATEnabledInThisBuild(void)
 
 - (void)enableGenerations
 {
-  dispatch_async(_queue, ^{
+  dispatch_sync(_queue, ^{
     if (self->_generationsClients == 0) {
       FB::AllocationTracker::enableGenerations();
       FB::AllocationTracker::markGeneration();
@@ -77,7 +77,7 @@ BOOL FBIsFBATEnabledInThisBuild(void)
 
 - (void)disableGenerations
 {
-  dispatch_async(_queue, ^{
+  dispatch_sync(_queue, ^{
     self->_generationsClients -= 1;
     if (self->_generationsClients <= 0) {
       FB::AllocationTracker::disableGenerations();
@@ -132,11 +132,11 @@ BOOL FBIsFBATEnabledInThisBuild(void)
 - (NSArray<NSArray<FBAllocationTrackerSummary *> *> *)currentSummaryForGenerations
 {
   FB::AllocationTracker::FullGenerationSummary summary = FB::AllocationTracker::generationSummary();
-  
+
   if (summary.size() == 0) {
     return nil;
   }
-  
+
   NSMutableArray *array = [NSMutableArray new];
 
   for (const auto &generation: summary) {
@@ -151,11 +151,11 @@ BOOL FBIsFBATEnabledInThisBuild(void)
                   inGeneration:(NSInteger)generation
 {
   std::vector<__weak id> objects = FB::AllocationTracker::instancesOfClassForGeneration(aCls, generation);
-  
+
   if (objects.size() == 0) {
     return nil;
   }
-  
+
   NSMutableArray *objectArray = [NSMutableArray new];
   for (id obj: objects) {
     if (obj) {
